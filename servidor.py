@@ -12,11 +12,13 @@ except socket.error:
     print "Erro ao criar o socket"
     exit(1)
 
-host = "localhost"
+host = '127.0.0.1'
 port = int(argv[1])
 addr = (host,port)
 
-sock_descr.bind(addr)
+print "Nome: "+str(sock_descr.getsockname())
+
+#sock_descr.bind(addr)
 
 sock_descr.close()
 

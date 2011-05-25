@@ -6,21 +6,37 @@ if len(argv) != 2:
     print "Uso correto: servidor <porta>"
     exit(1)
 
+if not has_ipv6:
+    exit(1)
+
 try:
-    sock_descr = socket(AF_INET6, SOCK_STREAM)
+    serversocket = socket(AF_INET, SOCK_STREAM, 0)
 except socket.error:
     print "Erro ao criar o socket"
     exit(1)
 
-host = '127.0.0.1'
+hostName = gethostname()
 port = int(argv[1])
-addr = (host,port)
+addr = ("localhost", port) #(gethostbyname(hostName),port)
 
-print "Nome: "+str(sock_descr.getsockname())
+print "Name: "+hostName
 
-#sock_descr.bind(addr)
+try:
+    serversocket.bind(addr)
+except:
+    print "Nao consegui fazer o bind"
+    exit(1)
 
-sock_descr.close()
+serversocket.listen(5)
+buff = 8192
 
-#print "Porta: " + porta
+while 1:
+    (clientsocket, address) = serversocket.accept()
+    (buff, addrClient) = recvfrom(8192)
+    print "Dado <<<<"+buff
 
+
+
+
+
+serversocket.close()

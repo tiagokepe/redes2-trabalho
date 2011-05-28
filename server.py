@@ -32,10 +32,11 @@ buff = 8192
 
 while 1:
     (clientsocket, address) = serversocket.accept()
-    (buff, addrClient) = recvfrom(8192)
+    (buff, addrClient) = clientsocket.recvfrom(8192)
     print "Dado <<<<"+buff
 
     if hostName == 'mumm':
+	print 'IF >>>>>>>'
 	hostName='Meu nome = \t'+hostName	
 	serversocket.sendto(hostName, ('macalan', 9999))
 

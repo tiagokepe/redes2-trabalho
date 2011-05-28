@@ -10,7 +10,7 @@ if not has_ipv6:
     exit(1)
 
 try:
-    serversocket = socket(AF_INET, SOCK_STREAM, 0)
+    serversocket = socket(AF_INET6, SOCK_STREAM, 0)
 except socket.error:
     print "Erro ao criar o socket"
     exit(1)
@@ -35,8 +35,11 @@ while 1:
     (buff, addrClient) = recvfrom(8192)
     print "Dado <<<<"+buff
 
+    if hostName == 'mumm':
+	hostName='Meu nome = \t'+hostName	
+	serversocket.sendto(hostName, ('macalan', 9999))
 
-
+    print 'Aki = \t'+hostName
 
 
 serversocket.close()

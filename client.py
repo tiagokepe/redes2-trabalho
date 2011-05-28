@@ -2,16 +2,16 @@ from socket import *
 from sys import *
 
 # Set the socket parameters
-hostName = "localhost"#gethostname()
+hostName = gethostname()
 port = int(argv[1])
-addr = (hostName, port)
+addr = ('::1', port)
 #addr = (gethostbyname(hostName),port)
 
 buf = 8192
 
 nome=raw_input('introduza nome:\t')
 # Create socket
-UDPSock = socket(AF_INET, SOCK_STREAM, 0)
+sock = socket(AF_INET6, SOCK_STREAM, 0)
 
 def_msg = "===introduza o texto===";
 print "\n",def_msg
@@ -23,8 +23,9 @@ while (1):
         break
     else:
         data=nome+' diz:\t'+data
-        UDPSock.sendto(data, (hostName, port))
+	data=data+'Host=\t'+hostName
+        sock.sendto(data, (hostName, port))
 
 # Close socket
-UDPSock.close()
+sock.close()
 

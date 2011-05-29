@@ -1,35 +1,50 @@
+# client.py por Antonio e Tiago
+# Cliente TCP
+
 from socket import *
 from sys import *
 
-# Set the socket parameters
-hostName = 'localhost' #gethostname()
-port = int(argv[1])
-addr = ('::1', port)
-#addr = (gethostbyname(hostName),port)
+BUFSIZ = 8192
 
-buf = 8192
+if len(argv) != 3:
+    print "Uso correto: client <servidor> <porta>"
+    exit(1)
 
-nome=raw_input('introduza nome:\t')
-# Create socket
-sock = socket(AF_INET6, SOCK_STREAM, 0)
+# Host remoto
+HOST = argv[1]
+# Porta do Servidor
+PORT = int(argv[2])
+clientSocket = None
 
-sock.connect(('::', port))
+for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM):
+    af, socktype, proto, canonname, addrPort = result
+    try:
+        clientSocket = socket(af, socktype, proto)
+    except error, msg:
+        clientSocket = None
+        continue
+    try:
+        clientSocket.connect(addrPort)
+    except error, msg:
+        clientSocket.close()
+        clientSocket = None
+        continue
+    break
 
-def_msg = "===introduza o texto===";
-print "\n",def_msg
+if clientSocket is None:
+    print 'Nao consegui abrir o socket'
+    sys.exit(1)
 
-# Send messages
+msg = "Digite a expressao:";
+print "\n",msg
+
 while (1):
-    data = raw_input(nome+'>> ')
-    if not data:
-        break
-    else:
-	print 'ELSE'
-        data=nome+' diz:\t'+data
-	data=data+'Host=\t'+hostName
-        sock.sendto(data, (hostName, port))
+#    clientSocket.send('Servidor Inicial')
+    expr = raw_input('client>>>')
+    clientSocket.send(expr)
+    buff = clientSocket.recv(BUFSIZ)
+    print 'Recebido do servidor: '+buff
 
-# Close socket
-print'FIM'
-sock.close()
+clientSocket.close()
+
 

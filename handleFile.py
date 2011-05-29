@@ -28,12 +28,9 @@ class HandleFile:
     ## Retorna o numero de servidores #########################################
     def numberServers(self):
         self.file.seek(0)
-        for line in self.file:
-            if line != '':
-                lastLine = line
         try:
-            list = lastLine.partition(' ')
-            return int(list.__getitem__(0))
+            num = self.file.readline()
+            return int(num.rstrip('\n'))
         except error, msg:
             print 'Erro ao obter numero de servidores'
             sys.exit(1)
@@ -59,7 +56,7 @@ class HandleFile:
                     list = line.partition(' ')
                     return list.__getitem__(2).rstrip('\n')
                 except error, msg:
-                    print 'Erro ao obter numero de servidores'
+                    print 'Erro ao obter proximo servidor'
                     sys.exit(1)
 
             line = self.file.readline()

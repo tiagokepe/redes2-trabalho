@@ -56,7 +56,6 @@ numServer = hFile.numberServers()
 nxtServer = hFile.nextServer(hostName)
 ###############################################################################
 
-print 'IP proximo = \t'+gethostbyname(nxtServer)
 
 ##################### Laco Principal ##########################################
 (connectSocket, address) = serverSocket.accept()

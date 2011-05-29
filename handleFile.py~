@@ -46,7 +46,6 @@ class HandleFile:
         line = self.file.readline()
         ## Enquanto nao chegou no final do arquivo ############################
         while line != '':
-            list = line.partition(' ')
             ## Tira \n ##
             h = list.__getitem__(2).rstrip('\n')
             ## Chegou no host, pega o proximo ##

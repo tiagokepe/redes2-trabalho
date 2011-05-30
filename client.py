@@ -25,6 +25,9 @@ for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM):
         continue
     try:
         clientSocket.connect(addrPort)
+        print '>>>>>'
+        print addrPort
+        print '<<<<<'
     except error, msg:
         clientSocket.close()
         clientSocket = None
@@ -33,7 +36,7 @@ for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM):
 
 if clientSocket is None:
     print 'Nao consegui abrir o socket'
-    sys.exit(1)
+    exit(1)
 
 msg = "Digite a expressao:";
 print "\n",msg
@@ -41,7 +44,7 @@ print "\n",msg
 while (1):
 #    clientSocket.send('Servidor Inicial')
     expr = raw_input('client>>>')
-    clientSocket.send(expr)
+    clientSocket.send(str(expr))
     buff = clientSocket.recv(BUFSIZ)
     print 'Recebido do servidor: '+buff
 

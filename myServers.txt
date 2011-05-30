@@ -1,5 +1,4 @@
-4
+3
 1 mumm
 2 macalan
-3 pequeno
-4 priorat
+3 priorat

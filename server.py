@@ -4,6 +4,8 @@
 from socket import *
 from sys import *
 from handleFile import *
+import re
+import time
 
 QUEUE_SIZE = 5
 BUFSIZ = 8192
@@ -32,7 +34,7 @@ for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM, 0, AI_PASSIVE):
         continue
     try:
         serverSocket.bind(addrPort)
-        serverSocket.listen(QUEUE_SIZE)
+        serverSocket.listen(1) #QUEUE_SIZE)
     except error, msg:
         serverSocket.close()
         serverSocket = None
@@ -51,49 +53,80 @@ hFile = HandleFile(argv[2])
 myID = hFile.myServerId(hostName)
 numServer = hFile.numberServers()
 nxtServer = hFile.nextServer(hostName)
+addrNext = (nxtServer, int(argv[1]))
 ###############################################################################
 
+print 'proximo:'
+
+print addrNext
+
+#print '\n\n'
 
 ############### Socket para enviar msg ao proximo servidor ####################
 ########## Aceita primeira familia disponivel, IPv6 tem precedencia ###########
 if myID != numServer:
-    for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM, 0, AI_PASSIVE):
+#    sendSocket = socket(AF_INET6, SOCK_STREAM)
+    for result in getaddrinfo(nxtServer, PORT, AF_UNSPEC, SOCK_STREAM, 0, AI_PASSIVE):
         af, socktype, proto, canonname, addrPort = result
         try:
             sendSocket = socket(af, socktype, proto)
+            print '>>>>>>'
+            print sendSocket.getsockname()
+            print addrNext
+            #print serverSocket.getsockname()
+            print '<<<<<<'
         except error, msg:
             print 'Nao consegui abrir o socket'
             exit(1)
-###############################################################################            
-  
+###############################################################################
+
 
 ##################### Laco Principal ##########################################
 while 1:
-    (connectSocket, address) = serverSocket.accept()
-    buff = connectSocket.recv(BUFSIZ)
-    if not buff: 
+    (clientSocket, address) = serverSocket.accept()
+    print '@@@@@'
+    print clientSocket.getsockname()
+    print '@@@@@'
+    buff = clientSocket.recv(BUFSIZ)
+    if not buff:
         print 'Buffer vazio'
         break
 
     ## Sou servidor N ##
     if myID == numServer:
         ## Calcula expessao ##
-        result = eval(buff)
-        connectSocket.send(result)
+        buff = eval(buff)
+        buff = str(buff)
+#        print result
+ #       clientSocket.send(result)
     else:
         print "ELSE"
         ## Passa para proximo servidor ##
         IPnext = gethostbyname(nxtServer)
-        sendSocket.connect(IPnext, PORT)
-        sendSocket.send(buff)
-        buff = sendSocket.recv(BUFSIZ)
+        sendSocket.connect(addrNext)
+        print '%%%%%%%%%%%%%%%%'
+        print sendSocket.getpeername()
+        print '%%%%%%%%%%%%%%%%'
+        data = buff
+        sendSocket.send(data)
+        print 'Enviei para {0} >>>> {1}'.format(nxtServer,data)
+        data = sendSocket.recv(BUFSIZ)
+        buff = data
+        print 'Recebi da {0} >>>>> {1}'.format(nxtServer,data)
         if address[0] == gethostbyname(hostName):
             print "IF"
-        print "aki"
+        else:
+            print "aki"
 
-    sendSocket.close()
+    clientSocket.send(buff)
+    
+##    clientSocket.close()
+
+
+#        sendSocket.close()
+
 ###############################################################################
 
-connectSocket.close()
+clientSocket.close()
 
 

@@ -1,0 +1,12 @@
+Tue May 31 23:05:49 2011 - Cliente se conectou ao servidor: <mumm>
+Tue May 31 23:05:49 2011 - Servidor <mumm> enviou expressao: 6*6 para o host <10.254.0.11>
+Tue May 31 23:05:49 2011 - Host <macalan> recebeu expressao: 6*6 do servidor <10.254.0.11>
+Tue May 31 23:05:49 2011 - Host <mumm> recebeu o resultado 36 do servidor <10.254.0.11>
+0.11>
+Tue May 31 23:05:49 2011 - Host <mumm> enviou o resultado 36 para o client <10.254.0.11>
+Tue May 31 23:11:33 2011 - Cliente se conectou ao servidor: <mumm>
+Tue May 31 23:11:33 2011 - Servidor <mumm> enviou expressao: 8*9 para o host <10.254.0.11>
+Tue May 31 23:11:33 2011 - Host <macalan> recebeu expressao: 8*9 do servidor <10.254.0.11>
+Tue May 31 23:11:33 2011 - Host <mumm> recebeu o resultado 72 do servidor <10.254.0.6>
+.0.11>
+Tue May 31 23:11:33 2011 - Host <mumm> enviou o resultado 72 para o client <10.254.0.11>

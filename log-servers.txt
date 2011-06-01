@@ -1,12 +1,24 @@
-Tue May 31 23:05:49 2011 - Cliente se conectou ao servidor: <mumm>
-Tue May 31 23:05:49 2011 - Servidor <mumm> enviou expressao: 6*6 para o host <10.254.0.11>
-Tue May 31 23:05:49 2011 - Host <macalan> recebeu expressao: 6*6 do servidor <10.254.0.11>
-Tue May 31 23:05:49 2011 - Host <mumm> recebeu o resultado 36 do servidor <10.254.0.11>
-0.11>
-Tue May 31 23:05:49 2011 - Host <mumm> enviou o resultado 36 para o client <10.254.0.11>
-Tue May 31 23:11:33 2011 - Cliente se conectou ao servidor: <mumm>
-Tue May 31 23:11:33 2011 - Servidor <mumm> enviou expressao: 8*9 para o host <10.254.0.11>
-Tue May 31 23:11:33 2011 - Host <macalan> recebeu expressao: 8*9 do servidor <10.254.0.11>
-Tue May 31 23:11:33 2011 - Host <mumm> recebeu o resultado 72 do servidor <10.254.0.6>
-.0.11>
-Tue May 31 23:11:33 2011 - Host <mumm> enviou o resultado 72 para o client <10.254.0.11>
+Wed Jun  1 10:59:14 2011 - Cliente se conectou ao servidor: <mumm>
+Wed Jun  1 10:59:14 2011 - Servidor <mumm> recebeu expressao: 8*8 do host <10.254.0.56>
+Wed Jun  1 10:59:14 2011 - Servidor <mumm> enviou expressao: 8*8 para o servidor <10.254.0.6>
+Wed Jun  1 10:59:14 2011 - Servidor <macalan> recebeu expressao: 8*8 do host <10.254.0.11>
+Wed Jun  1 10:59:14 2011 - Servidor <macalan> enviou expressao: 8*8 para o servidor <10.254.0.49>
+Wed Jun  1 10:59:14 2011 - Servidor <priorat> recebeu expressao: 8*8 do host <10.254.0.6>
+Wed Jun  1 10:59:14 2011 - Servidor <priorat> enviou o resultado 64 para o servidor <10.254.0.6>
+Wed Jun  1 10:59:14 2011 - Servidor <macalan> recebeu o resultado 64 do servidor <10.254.0.49>
+Wed Jun  1 10:59:14 2011 - Servidor <macalan> enviou o resultado 64 para o servidor <10.254.0.11>
+Wed Jun  1 10:59:14 2011 - Servidor <mumm> recebeu o resultado 64 do servidor <10.254.0.6>
+Wed Jun  1 10:59:14 2011 - Servidor <mumm> enviou o resultado 64 para o servidor <10.254.0.56>
+Wed Jun  1 10:59:14 2011 - Cliente recebeu o resultado 64 do servidor <mumm>
+Wed Jun  1 11:00:52 2011 - Cliente se conectou ao servidor: <mumm>
+Wed Jun  1 11:00:52 2011 - Servidor <mumm> recebeu expressao: 9*9 do host <10.254.0.56>
+Wed Jun  1 11:00:52 2011 - Servidor <mumm> enviou expressao: 9*9 para o servidor <10.254.0.6>
+Wed Jun  1 11:00:52 2011 - Servidor <macalan> recebeu expressao: 9*9 do host <10.254.0.11>
+Wed Jun  1 11:00:52 2011 - Servidor <macalan> enviou expressao: 9*9 para o servidor <10.254.0.49>
+Wed Jun  1 11:00:52 2011 - Servidor <priorat> recebeu expressao: 9*9 do host <10.254.0.6>
+Wed Jun  1 11:00:52 2011 - Servidor <priorat> enviou o resultado 81 para o host <10.254.0.6>
+Wed Jun  1 11:00:52 2011 - Servidor <macalan> recebeu o resultado 81 do servidor <10.254.0.49>
+Wed Jun  1 11:00:52 2011 - Servidor <macalan> enviou o resultado 81 para o host <10.254.0.11>
+Wed Jun  1 11:00:52 2011 - Servidor <mumm> recebeu o resultado 81 do servidor <10.254.0.6>
+Wed Jun  1 11:00:52 2011 - Servidor <mumm> enviou o resultado 81 para o host <10.254.0.56>
+Wed Jun  1 11:00:52 2011 - Cliente recebeu o resultado 81 do servidor <mumm>

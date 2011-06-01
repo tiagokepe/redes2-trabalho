@@ -102,8 +102,14 @@ hLog = HandleLog()
 ##################### Laco Principal ##########################################
 while 1:
     (clientSocket, addrClient) = serverSocket.accept()
+    print "End client: "+str(addrClient)
+#    addrServer = clientSocket.getpeername()
+    addrServer = clientSocket.getsockname()
+    print "End Server: "+str(addrServer)
+
     print 'Inicio'
     buff = clientSocket.recv(BUFSIZ)
+    ## Cliente se conectou a esse servidor ##
     if addrClient[0] == gethostbyname(hostName):
         hLog.newClient(hostName)
     else:
@@ -124,20 +130,20 @@ while 1:
         ## Abrindo socket com o proximo servidor ##
 #        time.sleep(1)
         sendSocket = openSocketNext(nxtServer)
-        hLog.sendNext(hostName, addrClient[0], buff)
+        addrNext = sendSocket.getpeername()
+        hLog.sendExprNext(hostName, addrNext[0], buff)
         sendSocket.send(buff)
         buff = sendSocket.recv(BUFSIZ)
-        addrNext = sendSocket.getpeername()
         hLog.receiveResult(addrNext[0], hostName, buff)
 
         sendSocket.close()
 
-    clientSocket.send(buff)
-
     if addrClient[0] != gethostbyname(hostName):
         hLog.sendResult(hostName, addrClient[0], buff)
     else:
-        hLog.sendClient(hostName, addrClient[0], buff)
+        hLog.sendResultClient(hostName, addrClient[0], buff)
+
+    clientSocket.send(buff)
 ###############################################################################
 
 clientSocket.close()

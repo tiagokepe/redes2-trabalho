@@ -3,6 +3,7 @@
 
 from socket import *
 from sys import *
+from handleLog import *
 
 BUFSIZ = 8192
 FIM = 'quit'
@@ -39,7 +40,10 @@ def openClientSocket():
     return clientSocket
 ###############################################################################
 
+## Instancia para manipular arquivo de log ##
+hLog = HandleLog()
 
+SERVER = argv[1]
 
 ############################# INICIO DO CLIENTE ###############################
 
@@ -54,8 +58,10 @@ while True:
 #    expr = raw_input('client>>>')
     if expr != FIM:
         clientSocket = openClientSocket()
+        hLog.newClient(SERVER)
         clientSocket.send(str(expr))
         buff = clientSocket.recv(BUFSIZ)
+        hLog.receiveResultClient(SERVER, buff)
         print 'Resultado da expresao: '+buff
     else:
         #clientSocket.close()

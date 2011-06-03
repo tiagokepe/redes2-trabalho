@@ -13,6 +13,9 @@ p port
 begin
 	# Criamos um servidor na porta fornecida sobre IPV6.
 	server = TCPServer.open('::',port)
+    if Socket.gethostname != 'macalan'
+        nextServer = TCPSocket.open('macalan',port)
+
 rescue Exception => e
 	puts "Não pude abrir o socket. Verifique os dados fornecidos."
 	raise e
@@ -20,8 +23,16 @@ end
 
 
 loop {
-	cliente = server.accept
-	cliente.puts(Time.now.ctime)
-	cliente.puts "Closing the connection. Bye!"
-	cliente.close
+    cliente = server.accept
+
+    if Socket.gethostname == 'macalan'
+    	buff = Time.now.ctime
+    else
+        nextServer.puts("")
+        buff = nextServer.gets
+    end
+
+    cliente.puts(buff)
+    puts buff
+    cliente.close
 }

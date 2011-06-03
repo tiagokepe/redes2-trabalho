@@ -14,7 +14,7 @@ def openClientSocket():
     ## Porta do Servidor ##
     PORT = int(argv[2])
     clientSocket = None
-
+    ####### Aceita a primeira familia disponivel, IPv6 tem precedencia ########
     for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM):
         af, socktype, proto, canonname, addrPort = result
         try:
@@ -24,9 +24,6 @@ def openClientSocket():
             continue
         try:
             clientSocket.connect(addrPort)
-            print '>>>>>'
-            print addrPort
-            print '<<<<<'
         except error, msg:
             clientSocket.close()
             clientSocket = None
@@ -54,8 +51,6 @@ if len(argv) != 3:
 
 while True:
     expr = raw_input("Digite a expressao ou quit para sair: ");
-#    print "\n",msg
-#    expr = raw_input('client>>>')
     if expr != FIM:
         clientSocket = openClientSocket()
         hLog.newClient(SERVER)
@@ -64,7 +59,7 @@ while True:
         hLog.receiveResultClient(SERVER, buff)
         print 'Resultado da expresao: '+buff
     else:
-        #clientSocket.close()
+        clientSocket.close()
         break
             
     clientSocket.close()

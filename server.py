@@ -18,7 +18,6 @@ def openListenSocket():
     HOST = None
     PORT = int(argv[1])
     serverSocket = None
-    ####### Aceita a primeira familia disponivel, IPv6 tem precedencia ########
     for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM, 0, AI_PASSIVE):
 
         af, socktype, proto, canonname, addrPort = result
@@ -34,7 +33,7 @@ def openListenSocket():
             serverSocket.close()
             serverSocket = None
             continue
-        break
+#        break
 
     if serverSocket is None:
         print 'Nao consegui abrir o socket de escuta'
@@ -50,9 +49,9 @@ def openSocketNext(nextHost):
     HOST = nextHost
     PORT = int(argv[1])
     sock = None
-
-    for res in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM):
-        af, socktype, proto, canonname, sa = res
+    ####### Aceita a primeira familia disponivel, IPv6 tem precedencia ########
+    for result in getaddrinfo(HOST, PORT, AF_UNSPEC, SOCK_STREAM):
+        af, socktype, proto, canonname, sa = result
         try:
             sock = socket(af, socktype, proto)
         except error, msg:
@@ -102,18 +101,13 @@ hLog = HandleLog()
 ##################### Laco Principal ##########################################
 while 1:
     (clientSocket, addrClient) = serverSocket.accept()
-    print "End client: "+str(addrClient)
-#    addrServer = clientSocket.getpeername()
     addrServer = clientSocket.getsockname()
-    print "End Server: "+str(addrServer)
-
-    print 'Inicio'
     buff = clientSocket.recv(BUFSIZ)
     ## Cliente se conectou a esse servidor ##
-    if addrClient[0] == gethostbyname(hostName):
-        hLog.newClient(hostName)
-    else:
-        hLog.receiveExpr(addrClient[0], hostName, buff)
+#    if addrClient[0] == gethostbyname(hostName):
+#        hLog.newClient(hostName)
+#    else:
+    hLog.receiveExpr(addrClient[0], hostName, buff)
 
     if not buff:
         print 'Buffer vazio'
@@ -128,7 +122,6 @@ while 1:
         ## Passa para proximo servidor ##
         IPnext = gethostbyname(nxtServer)
         ## Abrindo socket com o proximo servidor ##
-#        time.sleep(1)
         sendSocket = openSocketNext(nxtServer)
         addrNext = sendSocket.getpeername()
         hLog.sendExprNext(hostName, addrNext[0], buff)

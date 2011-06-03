@@ -1,24 +1,134 @@
-Wed Jun  1 10:59:14 2011 - Cliente se conectou ao servidor: <mumm>
-Wed Jun  1 10:59:14 2011 - Servidor <mumm> recebeu expressao: 8*8 do host <10.254.0.56>
-Wed Jun  1 10:59:14 2011 - Servidor <mumm> enviou expressao: 8*8 para o servidor <10.254.0.6>
-Wed Jun  1 10:59:14 2011 - Servidor <macalan> recebeu expressao: 8*8 do host <10.254.0.11>
-Wed Jun  1 10:59:14 2011 - Servidor <macalan> enviou expressao: 8*8 para o servidor <10.254.0.49>
-Wed Jun  1 10:59:14 2011 - Servidor <priorat> recebeu expressao: 8*8 do host <10.254.0.6>
-Wed Jun  1 10:59:14 2011 - Servidor <priorat> enviou o resultado 64 para o servidor <10.254.0.6>
-Wed Jun  1 10:59:14 2011 - Servidor <macalan> recebeu o resultado 64 do servidor <10.254.0.49>
-Wed Jun  1 10:59:14 2011 - Servidor <macalan> enviou o resultado 64 para o servidor <10.254.0.11>
-Wed Jun  1 10:59:14 2011 - Servidor <mumm> recebeu o resultado 64 do servidor <10.254.0.6>
-Wed Jun  1 10:59:14 2011 - Servidor <mumm> enviou o resultado 64 para o servidor <10.254.0.56>
-Wed Jun  1 10:59:14 2011 - Cliente recebeu o resultado 64 do servidor <mumm>
-Wed Jun  1 11:00:52 2011 - Cliente se conectou ao servidor: <mumm>
-Wed Jun  1 11:00:52 2011 - Servidor <mumm> recebeu expressao: 9*9 do host <10.254.0.56>
-Wed Jun  1 11:00:52 2011 - Servidor <mumm> enviou expressao: 9*9 para o servidor <10.254.0.6>
-Wed Jun  1 11:00:52 2011 - Servidor <macalan> recebeu expressao: 9*9 do host <10.254.0.11>
-Wed Jun  1 11:00:52 2011 - Servidor <macalan> enviou expressao: 9*9 para o servidor <10.254.0.49>
-Wed Jun  1 11:00:52 2011 - Servidor <priorat> recebeu expressao: 9*9 do host <10.254.0.6>
-Wed Jun  1 11:00:52 2011 - Servidor <priorat> enviou o resultado 81 para o host <10.254.0.6>
-Wed Jun  1 11:00:52 2011 - Servidor <macalan> recebeu o resultado 81 do servidor <10.254.0.49>
-Wed Jun  1 11:00:52 2011 - Servidor <macalan> enviou o resultado 81 para o host <10.254.0.11>
-Wed Jun  1 11:00:52 2011 - Servidor <mumm> recebeu o resultado 81 do servidor <10.254.0.6>
-Wed Jun  1 11:00:52 2011 - Servidor <mumm> enviou o resultado 81 para o host <10.254.0.56>
-Wed Jun  1 11:00:52 2011 - Cliente recebeu o resultado 81 do servidor <mumm>
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:41:42 2011 - Cliente se conectou ao servidor: <mumm>
+Fri Jun  3 16:41:42 2011 - Servidor <mumm> recebeu expressao: 8*8*8 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:41:42 2011 - Servidor <mumm> enviou expressao: 8*8*8 para o servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:41:43 2011 - Servidor <macalan> recebeu expressao: 8*8*8 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:41:51 2011 - Servidor <macalan> enviou expressao: 8*8*8 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:41:52 2011 - Servidor <priorat> recebeu expressao: 8*8*8 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:41:52 2011 - Servidor <priorat> enviou o resultado 512 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:41:52 2011 - Servidor <macalan> recebeu o resultado 512 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:41:52 2011 - Servidor <macalan> enviou o resultado 512 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:41:52 2011 - Servidor <mumm> recebeu o resultado 512 do servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:41:52 2011 - Servidor <mumm> enviou o resultado 512 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:41:52 2011 - Cliente recebeu o resultado 512 do servidor <mumm>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:43:18 2011 - Cliente se conectou ao servidor: <mumm>
+Fri Jun  3 16:43:18 2011 - Servidor <mumm> recebeu expressao: 4+7 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:43:18 2011 - Servidor <mumm> enviou expressao: 4+7 para o servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:43:18 2011 - Servidor <macalan> recebeu expressao: 4+7 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:43:18 2011 - Servidor <macalan> enviou expressao: 4+7 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:43:18 2011 - Servidor <priorat> recebeu expressao: 4+7 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:43:18 2011 - Servidor <priorat> enviou o resultado 11 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:43:18 2011 - Servidor <macalan> recebeu o resultado 11 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:43:18 2011 - Servidor <macalan> enviou o resultado 11 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:43:18 2011 - Servidor <mumm> recebeu o resultado 11 do servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:43:18 2011 - Servidor <mumm> enviou o resultado 11 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:43:18 2011 - Cliente recebeu o resultado 11 do servidor <mumm>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:43:48 2011 - Cliente se conectou ao servidor: <macalan>
+Fri Jun  3 16:43:48 2011 - Servidor <macalan> recebeu expressao: 5*5*5 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:43:48 2011 - Servidor <macalan> enviou expressao: 5*5*5 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:43:48 2011 - Servidor <priorat> recebeu expressao: 5*5*5 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:43:48 2011 - Servidor <priorat> enviou o resultado 125 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:43:48 2011 - Servidor <macalan> recebeu o resultado 125 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:43:48 2011 - Servidor <macalan> enviou o resultado 125 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:43:48 2011 - Cliente recebeu o resultado 125 do servidor <macalan>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:45:20 2011 - Cliente se conectou ao servidor: <priorat>
+Fri Jun  3 16:45:20 2011 - Servidor <priorat> recebeu expressao: 8*89 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:45:20 2011 - Servidor <priorat> enviou o resultado 712 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:45:20 2011 - Cliente recebeu o resultado 712 do servidor <priorat>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:47:49 2011 - Cliente se conectou ao servidor: <mumm>
+Fri Jun  3 16:47:49 2011 - Servidor <mumm> recebeu expressao: 2+2+1+0 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:47:49 2011 - Servidor <mumm> enviou expressao: 2+2+1+0 para o servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:47:49 2011 - Servidor <macalan> recebeu expressao: 2+2+1+0 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:47:49 2011 - Servidor <macalan> enviou expressao: 2+2+1+0 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:47:49 2011 - Servidor <priorat> recebeu expressao: 2+2+1+0 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:47:49 2011 - Servidor <priorat> enviou expressao: 2+2+1+0 para o servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:47:49 2011 - Servidor <dalmore> recebeu expressao: 2+2+1+0 do host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:47:49 2011 - Servidor <dalmore> enviou o resultado 5 para o host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:47:49 2011 - Servidor <priorat> recebeu o resultado 5 do servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:47:49 2011 - Servidor <priorat> enviou o resultado 5 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:47:49 2011 - Servidor <macalan> recebeu o resultado 5 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:47:49 2011 - Servidor <macalan> enviou o resultado 5 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:47:49 2011 - Servidor <mumm> recebeu o resultado 5 do servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:47:49 2011 - Servidor <mumm> enviou o resultado 5 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:47:49 2011 - Cliente recebeu o resultado 5 do servidor <mumm>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:49:47 2011 - Cliente se conectou ao servidor: <macalan>
+Fri Jun  3 16:49:47 2011 - Servidor <macalan> recebeu expressao: 6*6 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:49:47 2011 - Servidor <macalan> enviou expressao: 6*6 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:49:47 2011 - Servidor <priorat> recebeu expressao: 6*6 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:49:47 2011 - Servidor <priorat> enviou expressao: 6*6 para o servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:49:47 2011 - Servidor <dalmore> recebeu expressao: 6*6 do host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:49:47 2011 - Servidor <dalmore> enviou o resultado 36 para o host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:49:47 2011 - Servidor <priorat> recebeu o resultado 36 do servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:49:47 2011 - Servidor <priorat> enviou o resultado 36 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:49:47 2011 - Servidor <macalan> recebeu o resultado 36 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:49:47 2011 - Servidor <macalan> enviou o resultado 36 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:49:47 2011 - Cliente recebeu o resultado 36 do servidor <macalan>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:52:13 2011 - Cliente se conectou ao servidor: <macalan>
+Fri Jun  3 16:52:13 2011 - Servidor <macalan> recebeu expressao: 3*1 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:52:13 2011 - Servidor <macalan> enviou expressao: 3*1 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:13 2011 - Servidor <priorat> recebeu expressao: 3*1 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:52:13 2011 - Servidor <priorat> enviou expressao: 3*1 para o servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:17 2011 - Servidor <dalmore> recebeu expressao: 3*1 do host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:18 2011 - Servidor <dalmore> enviou expressao: 3*1 para o servidor <2801:82:80ff:8001:216:3eff:fe79:35>
+Fri Jun  3 16:52:18 2011 - Servidor <bowmore> recebeu expressao: 3*1 do host <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:18 2011 - Servidor <bowmore> enviou o resultado 3 para o host <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:18 2011 - Servidor <dalmore> recebeu o resultado 3 do servidor <2801:82:80ff:8001:216:3eff:fe79:35>
+Fri Jun  3 16:52:18 2011 - Servidor <dalmore> enviou o resultado 3 para o host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:18 2011 - Servidor <priorat> recebeu o resultado 3 do servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:18 2011 - Servidor <priorat> enviou o resultado 3 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:52:18 2011 - Servidor <macalan> recebeu o resultado 3 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:18 2011 - Servidor <macalan> enviou o resultado 3 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:52:18 2011 - Cliente recebeu o resultado 3 do servidor <macalan>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:52:28 2011 - Cliente se conectou ao servidor: <macalan>
+Fri Jun  3 16:52:28 2011 - Servidor <macalan> recebeu expressao: 5*6 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:52:28 2011 - Servidor <macalan> enviou expressao: 5*6 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:28 2011 - Servidor <priorat> recebeu expressao: 5*6 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:52:28 2011 - Servidor <priorat> enviou expressao: 5*6 para o servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:28 2011 - Servidor <dalmore> recebeu expressao: 5*6 do host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:28 2011 - Servidor <dalmore> enviou expressao: 5*6 para o servidor <2801:82:80ff:8001:216:3eff:fe79:35>
+Fri Jun  3 16:52:28 2011 - Servidor <bowmore> recebeu expressao: 5*6 do host <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:28 2011 - Servidor <bowmore> enviou o resultado 30 para o host <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:28 2011 - Servidor <dalmore> recebeu o resultado 30 do servidor <2801:82:80ff:8001:216:3eff:fe79:35>
+Fri Jun  3 16:52:28 2011 - Servidor <dalmore> enviou o resultado 30 para o host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:28 2011 - Servidor <priorat> recebeu o resultado 30 do servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:52:28 2011 - Servidor <priorat> enviou o resultado 30 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:52:28 2011 - Servidor <macalan> recebeu o resultado 30 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:52:28 2011 - Servidor <macalan> enviou o resultado 30 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:52:28 2011 - Cliente recebeu o resultado 30 do servidor <macalan>
+--------------------- Finalizou -----------------------
+-------------------- Novo cliente ---------------------
+Fri Jun  3 16:53:15 2011 - Cliente se conectou ao servidor: <mumm>
+Fri Jun  3 16:53:15 2011 - Servidor <mumm> recebeu expressao: 2000/1000 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:53:15 2011 - Servidor <mumm> enviou expressao: 2000/1000 para o servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:53:17 2011 - Servidor <macalan> recebeu expressao: 2000/1000 do host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:53:17 2011 - Servidor <macalan> enviou expressao: 2000/1000 para o servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:53:19 2011 - Servidor <priorat> recebeu expressao: 2000/1000 do host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:53:19 2011 - Servidor <priorat> enviou expressao: 2000/1000 para o servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:53:19 2011 - Servidor <dalmore> recebeu expressao: 2000/1000 do host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:53:19 2011 - Servidor <dalmore> enviou expressao: 2000/1000 para o servidor <2801:82:80ff:8001:216:3eff:fe79:35>
+Fri Jun  3 16:53:19 2011 - Servidor <bowmore> recebeu expressao: 2000/1000 do host <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:53:19 2011 - Servidor <bowmore> enviou o resultado 2 para o host <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:53:19 2011 - Servidor <dalmore> recebeu o resultado 2 do servidor <2801:82:80ff:8001:216:3eff:fe79:35>
+Fri Jun  3 16:53:19 2011 - Servidor <dalmore> enviou o resultado 2 para o host <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:53:19 2011 - Servidor <priorat> recebeu o resultado 2 do servidor <2801:82:80ff:8001:216:3eff:fe79:38>
+Fri Jun  3 16:53:19 2011 - Servidor <priorat> enviou o resultado 2 para o host <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:53:20 2011 - Servidor <macalan> recebeu o resultado 2 do servidor <2801:82:80ff:8001:216:3eff:fe79:31>
+Fri Jun  3 16:53:21 2011 - Servidor <macalan> enviou o resultado 2 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:53:22 2011 - Servidor <mumm> recebeu o resultado 2 do servidor <2801:82:80ff:8001:216:3eff:fe79:6>
+Fri Jun  3 16:53:22 2011 - Servidor <mumm> enviou o resultado 2 para o host <2801:82:80ff:8001:216:3eff:fe79:b>
+Fri Jun  3 16:53:22 2011 - Cliente recebeu o resultado 2 do servidor <mumm>
+--------------------- Finalizou -----------------------

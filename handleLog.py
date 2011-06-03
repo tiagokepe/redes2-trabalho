@@ -9,11 +9,11 @@ class HandleLog:
 
     ## Abre arquivo de log para manipulacao ###################################
     def __init__(self):
-#        self.fileName = 'log-'+host+'.txt'
         self.fileName = 'log-servers.txt'
         
     def newClient(self, host):
         self.logFile = open(self.fileName, 'ab+')
+        self.logFile.write("-------------------- Novo cliente ---------------------\n")
         msg = [time.ctime()," - Cliente se conectou ao servidor: <",host,">\n"]
         self.logFile.write("".join(msg))
         self.logFile.close()
@@ -28,6 +28,8 @@ class HandleLog:
         self.logFile = open(self.fileName, 'ab+')
         msg = [time.ctime()," - Cliente recebeu o resultado ",res," do servidor <",hostSource,">\n"]
         self.logFile.write("".join(msg))
+        self.logFile.write("--------------------- Finalizou -----------------------\n")
+
         self.logFile.close() 
 
     def sendExprNext(self, hostSource, hostDest, expr):
